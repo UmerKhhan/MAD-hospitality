@@ -93,7 +93,7 @@ header {
   border-left: 1px solid var(--black);
   border-bottom: 1px solid var(--black);
   transform: rotate(-45deg);
-  /* margin-bottom: 0.3rem; */
+  margin-bottom: 0.3rem;
 }
 .more_content.About{
   background-color: var(--white);
@@ -155,12 +155,12 @@ header {
   justify-self: center;
   flex-direction: column;
   gap: 3rem;
-  margin: 2rem;
+  margin: 5rem 2rem;
 }
 .main-cards-section >h1{
   width: 75%;
   font-size: 4.1rem ;
-  margin: 4rem;
+  margin: 2rem;
   font-weight: 100;
 }
 .main-cards-section .card-1,
