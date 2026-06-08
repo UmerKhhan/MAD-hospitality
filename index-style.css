@@ -95,7 +95,7 @@ header {
   transform: rotate(-45deg);
   margin-bottom: 0.3rem;
 }
-.more_content.About{
+.more_content{
   background-color: var(--white);
   padding: 1rem;
   width: 6rem;
@@ -111,7 +111,7 @@ header {
   opacity: 0;
 }
 
-.more_content.About.ON{
+.more_content.ON{
   opacity: 1;
   max-height: 6rem;
   visibility: visible;

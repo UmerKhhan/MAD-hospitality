@@ -1,30 +1,18 @@
-let showContent_about = document.querySelector(".nav-bar .show_more.About");
-let moreContent_about =document.querySelector(".nav-bar .more_content.About");
-
-
-document.querySelector(".nav-bar .show_more.About")
-  .addEventListener("mouseenter", () => {
-    document.querySelector(".nav-bar .more_content.About").classList.add("ON");
-  });
-document
-  .querySelector(".nav-bar .more_content.About")
-  .addEventListener("mouseleave", () => {
-    document
-      .querySelector(".nav-bar .more_content.About")
-      .classList.remove("ON");
-  });
-
-document
-  .querySelector(".mb-nav-bar .show_more.About")
-  .addEventListener("mouseenter", () => {
-    document
-      .querySelector(".mb-nav-bar .more_content.About")
-      .classList.add("ON");
-  });
-document
-  .querySelector(".mb-nav-bar .more_content.About")
-  .addEventListener("mouseleave", () => {
-    document
-      .querySelector(".mb-nav-bar .more_content.About")
-      .classList.remove("ON");
-  });
+document.querySelector('.nav-bar ul').addEventListener("mouseover",(event)=>{
+  if(event.target.matches(".show_more")){
+    // First, hide all open dropdowns
+    document.querySelectorAll(".more_content.ON").forEach((dropdown) => {
+      dropdown.classList.remove("ON");
+    });
+    
+    // Then show the current one
+    event.target.parentElement.querySelector(".more_content").classList.add("ON");
+  }
+});
+document.addEventListener("click",(event)=>{
+  if (!event.target.closest(".nav-bar")){
+    document.querySelectorAll(".more_content.ON").forEach((dropdown) => {
+      dropdown.classList.remove("ON");
+    });
+  }
+});
