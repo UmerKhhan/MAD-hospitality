@@ -16,3 +16,13 @@ document.addEventListener("click",(event)=>{
     });
   }
 });
+document.querySelectorAll(".more_content").forEach((surface) => {
+  surface.addEventListener("mouseleave", () => {
+    setTimeout(() => {
+      // Loop again to remove the class from all dropdowns
+      document.querySelectorAll(".more_content.ON").forEach((dropdown) => {
+        dropdown.classList.remove("ON");
+      });
+    }, 100);
+  });
+});
